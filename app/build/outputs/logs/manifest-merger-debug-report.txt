@@ -1,0 +1,160 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:2:1-60:12
+	package
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:3:5-40
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:8:22-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:9:22-64
+application
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:11:5-58:19
+MERGED from [com.android.volley:volley:unspecified] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.volley/volley/unspecified/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:14:9-41
+	android:supportsRtl
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:15:9-35
+	android:allowBackup
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:13:9-43
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:16:9-40
+activity#com.jsalvagno.friend_list.LoginActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:17:9-25:20
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:19:13-45
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:18:13-42
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.jsalvagno.friend_list.LocalActivitiesActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:26:9-30:46
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:28:13-68
+	android:launchMode
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:30:13-43
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:27:13-52
+activity#com.jsalvagno.friend_list.ActivityDetailActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:31:9-35:69
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:33:13-37
+	android:parentActivityName
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:35:13-66
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:32:13-51
+activity#com.jsalvagno.friend_list.UserProfileActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:36:9-40:69
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:38:13-36
+	android:parentActivityName
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:40:13-66
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:39:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:37:13-48
+activity#com.jsalvagno.friend_list.UserRatingsActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:41:9-45:69
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:43:13-37
+	android:parentActivityName
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:45:13-66
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:44:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:42:13-48
+activity#com.jsalvagno.friend_list.CommentViewActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:46:9-48:15
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:47:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:46:19-54
+activity#com.jsalvagno.friend_list.RegisterUserActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:49:9-58
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:49:19-55
+activity#com.jsalvagno.friend_list.NewUserActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:50:9-53
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:50:19-50
+activity#com.jsalvagno.friend_list.InterestedUsersActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:51:9-53:15
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:52:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:51:19-58
+activity#com.jsalvagno.friend_list.BaseActivity
+ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:54:9-57:68
+	android:label
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:56:13-56
+	android:theme
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:57:13-56
+	android:name
+		ADDED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml:55:13-41
+uses-sdk
+INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.volley:volley:unspecified] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.volley/volley/unspecified/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:design:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:24.2.1] /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/AndroidManifest.xml

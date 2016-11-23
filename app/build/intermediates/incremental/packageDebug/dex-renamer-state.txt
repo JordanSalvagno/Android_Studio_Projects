@@ -1,0 +1,7 @@
+#Tue Nov 22 23:01:18 PST 2016
+base.0=/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_02bb74f66126adf16d3dfe986d500208463eaee7
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ecbceef6a63b219495964af81f8d8522beaad628/classes.dex
+base.1=/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ecbceef6a63b219495964af81f8d8522beaad628
+file.0=/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_02bb74f66126adf16d3dfe986d500208463eaee7/classes.dex
