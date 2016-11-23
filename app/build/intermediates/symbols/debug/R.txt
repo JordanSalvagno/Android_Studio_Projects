@@ -671,7 +671,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c005b
 int id action_mode_bar_stub 0x7f0c005a
 int id action_mode_close_button 0x7f0c003f
-int id action_settings 0x7f0c00cc
+int id action_settings 0x7f0c00cd
 int id activityScrollMessage 0x7f0c0098
 int id activityScrollView 0x7f0c0096
 int id activity_chooser_view_content 0x7f0c0040
@@ -716,7 +716,7 @@ int id design_menu_item_text 0x7f0c008a
 int id design_navigation_view 0x7f0c0089
 int id disableHome 0x7f0c000e
 int id drawer_layout 0x7f0c006e
-int id edit 0x7f0c00cd
+int id edit 0x7f0c00ce
 int id editActivityCity 0x7f0c008f
 int id editActivityMessage 0x7f0c0094
 int id editActivityState 0x7f0c0090
@@ -774,6 +774,7 @@ int id middle 0x7f0c0035
 int id mini 0x7f0c0033
 int id multiply 0x7f0c001b
 int id nav_add_activity 0x7f0c00cb
+int id nav_edit_profile 0x7f0c00cc
 int id nav_interests 0x7f0c00ca
 int id nav_messages 0x7f0c00c9
 int id nav_profile 0x7f0c00c8

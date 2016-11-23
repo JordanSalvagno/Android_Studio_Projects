@@ -5,43 +5,37 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="295435436143914"
+    timestamp="298793269412062"
     token="-2673722444072568431"
-    verifier="METHOD_DELETED" >
+    verifier="CLASS_ADDED" >
 
     <task
         name="javac"
-        duration="4022" />
+        duration="1384" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="190" />
+        duration="93" />
     <task
         name="verifier"
-        duration="110" />
+        duration="25" />
 
-    <artifact
-        location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
     <artifact
         location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
         type="DEX" />
 
     <build
-        timestamp="293999572874436"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="298265655208560"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="295435436143914"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
+        timestamp="298793269412062"
+        verifier="CLASS_ADDED" >
         <artifact
             location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
             type="DEX" />

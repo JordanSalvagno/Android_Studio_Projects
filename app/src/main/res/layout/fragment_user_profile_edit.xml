@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#f9f9f9">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/editUserRealName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="15dp"
+        android:hint="First Name, Last Name"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/editUserEmail"
+        android:layout_below="@+id/editUserRealName"
+        android:layout_marginEnd="15dp"
+        android:hint="email"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/editUserCity"
+        android:layout_below="@+id/editUserEmail"
+        android:layout_marginEnd="15dp"
+        android:hint="City"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/editUserState"
+        android:layout_below="@+id/editUserCity"
+        android:layout_marginEnd="15dp"
+        android:hint="State"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/editUserZip"
+        android:layout_below="@+id/editUserState"
+        android:layout_marginEnd="15dp"
+        android:hint="Zip"
+        android:inputType="number"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editUserZip"
+        android:id="@+id/userBioEditScrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Bio Text"
+            android:id="@+id/userProfileEditBio"
+            android:textSize="18sp"
+            android:textColor="#000000"/>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveActivity"
+        android:text="@string/save_activity_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/userBioEditScrollView"/>
+
+
+</RelativeLayout>

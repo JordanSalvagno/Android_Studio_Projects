@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+    tools:context="com.jsalvagno.friend_list.LocalActivitiesActivity"
+    tools:showIn="@layout/activity_local_activities">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:hint="Search by Zip"
+        android:id="@+id/inputZip"
+        android:layout_alignParentEnd="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchZip"
+        android:text="@string/search_zip_button"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inputZip"/>
+
+    <fragment
+        android:id="@+id/localActivitiesFrag"
+        android:name="com.jsalvagno.friend_list.LocalActivitiesListFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchZip"/>
+
+</RelativeLayout>
