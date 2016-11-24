@@ -132,12 +132,12 @@
         "source": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/res/merged/debug/layout/list_row.xml",
-        "source": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/res/layout/list_row.xml"
-    },
-    {
         "merged": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/res/merged/debug/layout/list_row.xml",
+        "source": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/src/main/res/layout/list_row.xml"
     },
     {
         "merged": "/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",

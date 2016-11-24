@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 public class User {
 
-    private String name, uname, city, bio, email, activitiesURL, ratingsURL;
-    private int userId, zip;
+    private String name, uname, city, bio, email, activitiesURL, ratingsURL, zip;
+    private int userId;
 
     public User()
     {
@@ -18,12 +18,12 @@ public class User {
         this.activitiesURL = "";
         this.ratingsURL = "";
         this.city = "";
-        this.zip = 0;
+        this.zip = "";
         this.bio = "";
         this.userId= 0;
     }
 
-    public User(String name, String uname, String email, String bio, String activitiesURL, String ratingsURL, String city, int zip){
+    public User(String name, String uname, String email, String bio, String activitiesURL, String ratingsURL, String city, String zip){
         this.uname = uname;
         this.email = email;
         this.activitiesURL = activitiesURL;
@@ -34,7 +34,7 @@ public class User {
         this.userId= 0;
     }
 
-    public User(String name, String uname, String email, String city, int zip, int userId){
+    public User(String name, String uname, String email, String city, String zip, int userId){
         this.name = name;
         this.uname = uname;
         this.email = email;
@@ -61,7 +61,7 @@ public class User {
         return city;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 

@@ -30,12 +30,12 @@ public class InterestedUserAdapter extends ArrayAdapter<User> {
         User interestedUser = getItem(position);
 
         //create a new ViewHolder
-        InterestedUserAdapter.ViewHolder viewHolder;
+        ViewHolder viewHolder;
 
         // Check if an existing view is being reused, otherwise inflate a new view from custom row layout
         if (convertView == null) {
 
-            viewHolder = new InterestedUserAdapter.ViewHolder();
+            viewHolder = new ViewHolder();
 
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.user_list_row, parent, false);
 
@@ -49,7 +49,7 @@ public class InterestedUserAdapter extends ArrayAdapter<User> {
         }
         else{
             //already have a view
-            viewHolder = (InterestedUserAdapter.ViewHolder) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
         //Fill each referenced view with data associated with activity it's referencing

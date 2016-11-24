@@ -98,7 +98,8 @@ public class BaseActivity extends AppCompatActivity
         } else if (id == R.id.nav_messages) {
 
         } else if (id == R.id.nav_interests) {
-
+            Intent intent = new Intent(this, InterestedUsersActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_add_activity) {
             Intent intent = new Intent(this, ActivityDetailActivity.class);
             intent.putExtra(LocalActivitiesActivity.FRAGMENT_TO_LOAD_EXTRA, LocalActivitiesActivity.FragmentToLaunch.CREATE);

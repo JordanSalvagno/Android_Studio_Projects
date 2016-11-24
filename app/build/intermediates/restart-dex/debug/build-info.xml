@@ -5,40 +5,40 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="303177603699165"
+    timestamp="315033483891089"
     token="-2673722444072568431"
-    verifier="COMPATIBLE" >
+    verifier="METHOD_ADDED" >
 
     <task
         name="javac"
-        duration="2789" />
+        duration="330" />
     <task
         name="instant-run-dex"
-        duration="838" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="155" />
+        duration="40" />
     <task
         name="verifier"
-        duration="12" />
+        duration="27" />
 
     <artifact
-        location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="302832405688133"
+        timestamp="313792273222270"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="303177603699165"
-        verifier="COMPATIBLE" >
+        timestamp="315033483891089"
+        verifier="METHOD_ADDED" >
         <artifact
-            location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
+            location="/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

@@ -22,7 +22,7 @@ public class Activity {
         this.zip = zip;
         this.userId = userId;
         this.activityId = activityId;
-        this.user = new User("aljlsdjf", "aljsdfjlasjldfj", "username", "j@j.com", "ajlsdjflasjldf" , "aljsdlfjalsd","chico", 95963);
+        this.user = new User("aljlsdjf", "aljsdfjlasjldfj", "username", "j@j.com", "ajlsdjflasjldf" , "aljsdlfjalsd","chico", "95963");
     }
 
     public Activity(String title, String message, String city, int zip, User user){

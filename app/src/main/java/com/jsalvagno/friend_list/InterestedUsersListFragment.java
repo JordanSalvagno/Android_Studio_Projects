@@ -30,16 +30,14 @@ import java.util.ArrayList;
 public class InterestedUsersListFragment extends ListFragment {
 
     private ArrayList<User> users;
+    private ArrayList<String> userLinks;
     private InterestedUserAdapter interestedUserAdapter;
     private EditText inputZip;
-    String zipCode = "";
-    EditText zipInput;
-    String title, message, city, state, curUser;
-    int activityId, userId;
-    int zip;
+    String curUser;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.d("Interested users", "Looking for interested users");
         super.onActivityCreated(savedInstanceState);
         Intent intent = getActivity().getIntent();
         KeyValues keyValues = new KeyValues();
@@ -51,11 +49,11 @@ public class InterestedUsersListFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        launchCommentViewActivity(position);
+        launchInterestedUserActivity(position);
 
     }
 
-    private void launchCommentViewActivity(int position) {
+    private void launchInterestedUserActivity(int position) {
 
         //grab the Activity information for the row clicked
         User user = (User) getListAdapter().getItem(position);
@@ -71,8 +69,8 @@ public class InterestedUsersListFragment extends ListFragment {
     }
 
     public void retrieveInterestedUsers() {
-        String url = "http://192.241.232.97:3000/users/" + curUser + "/activity-users";
-        users = new ArrayList<User>();
+        String url = "http://192.241.232.97:3000/users/" + curUser + "/activities";
+        users = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -81,18 +79,29 @@ public class InterestedUsersListFragment extends ListFragment {
                         try {
                             JSONArray activityArray = response.optJSONArray("data");
                             Log.d("response", response.toString());
-
+                            String name, uname, city, state, zip, bio, email, activitiesURL, ratingsURL;
                             for (int i = 0; i < activityArray.length(); i++) {
-                                JSONObject userObject = activityArray.getJSONObject(i)
-                                        .getJSONObject("relationships").getJSONObject("user")
-                                        .getJSONObject("links");
-                                String url = userObject.getString("related");
-                                retrieveUser(url);
+                                JSONArray userArray = activityArray.getJSONObject(i).getJSONObject("attributes").getJSONArray("interested-users");
+                                for (int ii = 0; ii < userArray.length(); ii++) {
+                                    JSONObject userObject = userArray.getJSONObject(ii);
+                                        name = userObject.getString("name");
+                                        uname = userObject.getString("username");
+                                        city = userObject.getString("city");
+                                        state = userObject.getString("state");
+                                        bio = userObject.getString("bio");
+                                        email = userObject.getString("email");
+                                        zip = userObject.getString("zip");
+                                        activitiesURL = "";
+                                        ratingsURL = "";
+                                        users.add(new User(name, uname, email, bio, activitiesURL, ratingsURL, city, zip));
+                                }
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
                         interestedUserAdapter = new InterestedUserAdapter(getActivity(),users);
+                        setListAdapter(interestedUserAdapter);
+                        registerForContextMenu(getListView());
                     }
                 }, new Response.ErrorListener() {
 
@@ -104,46 +113,4 @@ public class InterestedUsersListFragment extends ListFragment {
 
         queue.add(jsonRequest);
     }
-    public void retrieveUser(String url) {
-        Log.d("Interested user url", url);
-        RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
-        JsonObjectRequest jsonRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        String name, uname, city, bio, email, activitiesURL, ratingsURL;
-                        int zip;
-                        try {
-                            JSONObject userObject = response.optJSONObject("data");
-                            JSONObject attributeObject = userObject.optJSONObject("attributes");
-                            JSONObject userActivitiesObject = userObject.optJSONObject("relationships")
-                                    .optJSONObject("activities").optJSONObject("links");
-                            JSONObject userRatingsObject = userObject.optJSONObject("relationships")
-                                    .optJSONObject("ratings").optJSONObject("links");
-                            name = attributeObject.getString("name");
-                            uname = attributeObject.getString("username");
-                            city = attributeObject.getString("city");
-                            bio = attributeObject.getString("bio");
-                            email = attributeObject.getString("email");
-                            zip = attributeObject.getInt("zip");
-                            activitiesURL = userActivitiesObject.getString("related");
-                            ratingsURL = userRatingsObject.getString("related");
-
-                            users.add(new User(name, uname, email, bio, activitiesURL, ratingsURL, city, zip));
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
-                    }
-                });
-        queue.add(jsonRequest);
-
-    }
-
 }
