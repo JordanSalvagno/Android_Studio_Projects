@@ -21,6 +21,7 @@ public class LocalActivitiesActivity extends BaseActivity {
     public static final String ACTIVITY_STATE_EXTRA = "com.jsalvagno.friend_list.state";
     public static final String ACTIVITY_ZIP_EXTRA = "com.jsalvagno.friend_list.zip";
     public static final String ACTIVITY_USER_ID_EXTRA = "com.jsalvagno.friend_list.User";
+    public static final String ACTIVITY_USER_IMAGE_EXTRA = "com.jsalvagno.friend_list.activity userImage";
     public static final String FRAGMENT_TO_LOAD_EXTRA = "com.jsalvagno.friend_list.Fragment_to_Load";
     public static Context mContext;
 

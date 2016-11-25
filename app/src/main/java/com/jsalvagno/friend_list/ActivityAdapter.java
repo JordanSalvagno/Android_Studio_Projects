@@ -8,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+
 import java.util.ArrayList;
 
 /**
@@ -18,7 +21,8 @@ public class ActivityAdapter extends ArrayAdapter<Activity> {
     public static class ViewHolder{
         TextView title;
         TextView activity;
-        ImageView activityIcon;
+        ImageLoader imageLoader;
+        NetworkImageView activityIcon;
     }
     public ActivityAdapter(Context context, ArrayList<Activity> activities){
         super(context, 0, activities);
@@ -43,7 +47,7 @@ public class ActivityAdapter extends ArrayAdapter<Activity> {
             //set our views to our view holder
             viewHolder.title = (TextView) convertView.findViewById(R.id.listItemActivityTitle);
             viewHolder.activity = (TextView) convertView.findViewById(R.id.listItemActivityBody);
-            viewHolder.activityIcon = (ImageView) convertView.findViewById(R.id.listItemUserImg);
+            viewHolder.activityIcon = (NetworkImageView) convertView.findViewById(R.id.listItemUserImg);
 
             convertView.setTag(viewHolder);
 
@@ -56,8 +60,9 @@ public class ActivityAdapter extends ArrayAdapter<Activity> {
         //Fill each referenced view with data associated with activity it's referencing
        viewHolder.title.setText(activity.getTitle());
         viewHolder.activity.setText(activity.getMessage());
-        viewHolder.activityIcon.setImageResource(activity.getAssociatedDrawable());
-
+        String URL = activity.getUserImageURL();
+        viewHolder.imageLoader = MySingleton.getInstance(this.getContext()).getImageLoader();
+        viewHolder.activityIcon.setImageUrl(URL, viewHolder.imageLoader);
         //return modified view to be displayed
         return convertView;
     }

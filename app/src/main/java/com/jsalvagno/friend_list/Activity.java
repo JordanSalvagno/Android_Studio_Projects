@@ -9,12 +9,12 @@ import java.util.Locale;
  * Created by jordansalvagno on 9/6/16.
  */
 public class Activity {
-    private String title, message, city, state;
+    private String title, message, city, state, userImage;
     private int activityId, userId;
     private int zip;
     private User user;
 
-    public Activity(String title, String message, String city, String state, int zip, int userId, int activityId){
+    public Activity(String title, String message, String city, String state, int zip, int userId, int activityId, String userImage){
         this.title = title;
         this.message = message;
         this.city = city;
@@ -22,16 +22,18 @@ public class Activity {
         this.zip = zip;
         this.userId = userId;
         this.activityId = activityId;
-        this.user = new User("aljlsdjf", "aljsdfjlasjldfj", "username", "j@j.com", "ajlsdjflasjldf" , "aljsdlfjalsd","chico", "95963");
+        this.userImage = userImage;
+        this.user = new User("", "", "", "", "" , "","", "", "");
     }
 
-    public Activity(String title, String message, String city, int zip, User user){
+    public Activity(String title, String message, String city, int zip, User user, String imageURL){
         this.title = title;
         this.message = message;
         this.city = city;
         this.zip = zip;
         this.activityId = 0;
         this.userId = 0;
+        this.userImage = imageURL;
         this.user = user;
     }
 
@@ -57,6 +59,10 @@ public class Activity {
 
     public int getActivityId(){
         return activityId;
+    }
+
+    public String getUserImageURL(){
+        return userImage;
     }
 
     public User getUser(){

@@ -17,7 +17,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -41,7 +43,8 @@ public class ActivityViewFragment extends Fragment {
 
     TextView messageView;
     TextView titleView;
-    String activityId, userId, curUser;
+    String activityId, userId, curUser, URL;
+    ImageLoader imageLoader;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -50,7 +53,7 @@ public class ActivityViewFragment extends Fragment {
 
         titleView = (TextView) fragmentLayout.findViewById(R.id.viewActivityTitle);
         messageView = (TextView) fragmentLayout.findViewById(R.id.viewActivityMessage);
-        ImageButton icon = (ImageButton) fragmentLayout.findViewById(R.id.viewActivityIcon);
+        NetworkImageView icon = (NetworkImageView) fragmentLayout.findViewById(R.id.viewActivityIcon);
         FloatingActionButton button = (FloatingActionButton) fragmentLayout.findViewById(R.id.fab);
 
         Intent intent = getActivity().getIntent();
@@ -61,10 +64,12 @@ public class ActivityViewFragment extends Fragment {
         curUser = keyValues.getCurrentUser(mContext);
         activityId = intent.getExtras().getString(LocalActivitiesActivity.ACTIVITY_ID_EXTRA);
         userId = intent.getExtras().getString(LocalActivitiesActivity.ACTIVITY_USER_ID_EXTRA);
+        URL = intent.getExtras().getString(LocalActivitiesActivity.ACTIVITY_USER_IMAGE_EXTRA);
+        imageLoader = MySingleton.getInstance(this.getContext()).getImageLoader();
+        icon.setImageUrl(URL, imageLoader);
 
         //new RetrieveActivity().execute();
 
-        icon.setImageResource(Activity.userIdToDrawable(1));
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

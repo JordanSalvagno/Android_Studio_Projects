@@ -14,9 +14,13 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+
 import static com.jsalvagno.friend_list.UserProfileActivity.activitiesURL;
 import static com.jsalvagno.friend_list.UserProfileActivity.bio;
 import static com.jsalvagno.friend_list.UserProfileActivity.curUser;
+import static com.jsalvagno.friend_list.UserProfileActivity.imageURL;
 import static com.jsalvagno.friend_list.UserProfileActivity.ratingsURL;
 import static com.jsalvagno.friend_list.UserProfileActivity.uname;
 import static com.jsalvagno.friend_list.UserProfileActivity.userId;
@@ -34,8 +38,10 @@ public class UserProfileFragment extends Fragment {
 
     TextView userNameView;
     TextView bioView;
-    ImageView icon;
+    NetworkImageView icon;
+    ImageLoader imageLoader;
     RatingBar rating;
+
     User user;
 /*    String name, uname, city, bio, email, activitiesURL, ratingsURL;
     String userId, curUser;
@@ -53,7 +59,7 @@ public class UserProfileFragment extends Fragment {
 
         userNameView = (TextView) fragmentLayout.findViewById(R.id.userProfileUserName);
         bioView = (TextView) fragmentLayout.findViewById(R.id.userProfileBio);
-        icon = (ImageView) fragmentLayout.findViewById(R.id.userProfileUserIcon);
+        icon = (NetworkImageView) fragmentLayout.findViewById(R.id.userProfileUserIcon);
         rating = (RatingBar) fragmentLayout.findViewById(R.id.userRatingBar);
 
         /*userId = intent.getExtras().getString(ActivityDetailActivity.USER_ID_EXTRA);
@@ -62,8 +68,8 @@ public class UserProfileFragment extends Fragment {
         ratingsURL = intent.getExtras().getString(ActivityDetailActivity.USER_RATINGS_EXTRA);*/
         userNameView.setText(uname);
         bioView.setText(bio);
-        rating.setRating(1);
-        icon.setImageResource(Activity.userIdToDrawable(1));
+        imageLoader = MySingleton.getInstance(getActivity().getApplicationContext()).getImageLoader();
+        icon.setImageUrl(imageURL, imageLoader);
         rating.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

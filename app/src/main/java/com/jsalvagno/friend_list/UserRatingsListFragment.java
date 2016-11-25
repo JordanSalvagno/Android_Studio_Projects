@@ -36,7 +36,7 @@ public class UserRatingsListFragment extends ListFragment {
 
     private ArrayList<Rating> ratings;
     private RatingAdapter ratingAdapter;
-    private String ratingURL, comment, commenterName, curUser;
+    private String ratingURL, comment, commenterName, curUser, imageURL;
     private int commentId, ratingId, userId;
     private float rating;
 
@@ -73,6 +73,7 @@ public class UserRatingsListFragment extends ListFragment {
         intent.putExtra(UserRatingsActivity.RATING_UNAME_EXTRA, rating.getUserComment());
         intent.putExtra(UserRatingsActivity.RATING_EXTRA, rating.getRating());
         intent.putExtra(UserRatingsActivity.RATING_USER_ID_EXTRA, rating.getUserComment());
+        intent.putExtra(UserRatingsActivity.RATING_USER_IMAGE_EXTRA, rating.getCommentersImage());
 
         startActivity(intent);
 
@@ -107,8 +108,9 @@ public class UserRatingsListFragment extends ListFragment {
                                 //find username of the rater
                                 JSONObject commenterObject = commenterArray.getJSONObject(i).optJSONObject("attributes");
                                 commenterName = commenterObject.getString("username");
+                                imageURL = commenterObject.getString("image");
 
-                                ratings.add(new Rating(commenterName,comment, rating, ratingId, userId, commentId));
+                                ratings.add(new Rating(commenterName,comment, rating, ratingId, userId, commentId, imageURL));
                             }
                             ratingAdapter = new RatingAdapter(getActivity(), ratings);
                             setListAdapter(ratingAdapter);

@@ -14,6 +14,7 @@ public class UserRatingsActivity extends BaseActivity {
     public static final String RATING_UNAME_EXTRA = "com.jsalvagno.friend_list.Rating Uname";
     public static final String RATING_EXTRA = "com.jsalvagno.friend_list.Rating Rating";
     public static final String RATING_USER_ID_EXTRA = "com.jsalvagno.friend_list.Rating UserId";
+    public static final String RATING_USER_IMAGE_EXTRA = "com.jsalvagno.friend_list.Rating UserImage";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

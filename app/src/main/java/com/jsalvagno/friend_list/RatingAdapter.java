@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+
 import java.util.ArrayList;
 
 /**
@@ -21,7 +24,8 @@ public class RatingAdapter extends ArrayAdapter<Rating> {
         TextView comment;
         TextView userName;
         RatingBar rating;
-        ImageView userIcon;
+        NetworkImageView userIcon;
+        ImageLoader imageLoader;
     }
     public RatingAdapter(Context context, ArrayList<Rating> ratings){
         super(context, 0, ratings);
@@ -47,7 +51,7 @@ public class RatingAdapter extends ArrayAdapter<Rating> {
             viewHolder.comment = (TextView) convertView.findViewById(R.id.ratingListItemComment);
             viewHolder.userName = (TextView) convertView.findViewById(R.id.ratingListItemUserName);
             viewHolder.rating = (RatingBar) convertView.findViewById(R.id.ratingListItemRating);
-            viewHolder.userIcon = (ImageView) convertView.findViewById(R.id.ratingListItemUserImg);
+            viewHolder.userIcon = (NetworkImageView) convertView.findViewById(R.id.ratingListItemUserImg);
 
             convertView.setTag(viewHolder);
 
@@ -60,7 +64,9 @@ public class RatingAdapter extends ArrayAdapter<Rating> {
         viewHolder.comment.setText(rating.getComment());
         viewHolder.userName.setText(rating.getCommenterUname());
         viewHolder.rating.setRating(rating.getRating());
-        viewHolder.userIcon.setImageResource(rating.getAssociatedDrawable());
+        String URL = rating.getCommentersImage();
+        viewHolder.imageLoader = MySingleton.getInstance(this.getContext()).getImageLoader();
+        viewHolder.userIcon.setImageUrl(URL, viewHolder.imageLoader);
 
         //return modified view to be displayed
         return convertView;

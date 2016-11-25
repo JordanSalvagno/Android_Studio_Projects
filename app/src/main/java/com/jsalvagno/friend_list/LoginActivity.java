@@ -53,6 +53,8 @@ import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * A login screen that offers login via email/password.
+ * --This activity was created from a default android studio login activity and
+ *   altered to work with my project
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
@@ -328,18 +330,23 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         Log.d("data", response.toString());
                         Intent intent = new Intent(getApplicationContext(), LocalActivitiesActivity.class);
                         String curUser = "";
+                        String imageUrl = "";
                         try {
                             JSONObject userObject = response.optJSONObject("data");
                             curUser = userObject.getString("id");
+                            imageUrl = userObject.getString("largeImage");
                             Log.d("curUser", curUser);
+                            Log.d("imageUrl", imageUrl);
                             KeyValues keyvalues = new KeyValues();
                             Context context = getApplicationContext();
                             keyvalues.setCurrentUser(context, curUser);
+                            keyvalues.setCurrentImage(context, imageUrl);
                             //intent.putExtra(LoginActivity.CURRENT_USER_ID_EXTRA, curUser);
                         }catch(JSONException e) {
+                            e.printStackTrace();
                         }
-
                         startActivity(intent);
+
 
                     }
                 }, new Response.ErrorListener() {

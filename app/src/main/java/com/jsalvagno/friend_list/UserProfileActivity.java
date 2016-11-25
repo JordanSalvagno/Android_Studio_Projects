@@ -26,7 +26,7 @@ public class UserProfileActivity extends BaseActivity {
     public static final String User_Ratings_URL_EXTRA = "com.jsalvagno.friend_list.Ratings";
     public static final String USER_ID_EXTRA = "com.jsalvagno.friend_list.user_id";
     public static final String FRAGMENT_TO_LOAD_EXTRA = "com.jsalvagno.friend_list.Fragment_to_Load";
-    public static String name, uname, city, state, bio, email, activitiesURL, ratingsURL;
+    public static String name, uname, city, state, bio, email, activitiesURL, ratingsURL, imageURL;
     public static String userId, curUser;
     public static String zip;
     public enum UserFragmentToLaunch{VIEW, EDIT}
@@ -101,6 +101,7 @@ public class UserProfileActivity extends BaseActivity {
                             bio = attributeObject.getString("bio");
                             email = attributeObject.getString("email");
                             zip = attributeObject.getString("zip");
+                            imageURL = attributeObject.getString("image");
                             activitiesURL = userActivitiesObject.getString("related");
                             ratingsURL = userRatingsObject.getString("related");
 

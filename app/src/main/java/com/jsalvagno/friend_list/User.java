@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class User {
 
-    private String name, uname, city, bio, email, activitiesURL, ratingsURL, zip;
+    private String name, uname, city, bio, email, activitiesURL, ratingsURL, zip, image;
     private int userId;
 
     public User()
@@ -23,7 +23,7 @@ public class User {
         this.userId= 0;
     }
 
-    public User(String name, String uname, String email, String bio, String activitiesURL, String ratingsURL, String city, String zip){
+    public User(String name, String uname, String email, String bio, String activitiesURL, String ratingsURL, String city, String zip, String image){
         this.uname = uname;
         this.email = email;
         this.activitiesURL = activitiesURL;
@@ -31,17 +31,8 @@ public class User {
         this.city = city;
         this.zip = zip;
         this.bio = bio;
-        this.userId= 0;
-    }
-
-    public User(String name, String uname, String email, String city, String zip, int userId){
-        this.name = name;
-        this.uname = uname;
-        this.email = email;
-        this.city = city;
-        this.zip = zip;
-        this.bio = "Bio Here";
-        this.userId = userId;
+        this.userId = 0;
+        this.image = image;
     }
 
     public String getname(){
@@ -75,6 +66,10 @@ public class User {
 
     public String getRatingsURL(){
         return ratingsURL;
+    }
+
+    public String getImageUrl(){
+        return image;
     }
 
     public String toString(){

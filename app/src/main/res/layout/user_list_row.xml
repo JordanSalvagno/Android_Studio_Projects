@@ -7,7 +7,7 @@
     android:paddingTop="10dp"
     android:paddingBottom="10dp">
 
-    <ImageView
+    <com.android.volley.toolbox.NetworkImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/InterestedUserListItemUserImg"
@@ -32,10 +32,12 @@
         android:layout_height="wrap_content"
         style= "?android:attr/ratingBarStyleSmall"
         android:numStars = "5"
-        android:rating   = "4"
+        android:rating   = "5"
+        android:stepSize = "0.1"
+        android:isIndicator="true"
+        android:gravity="end"
         android:id="@+id/InterestedUserListItemRating"
-        android:layout_marginStart="98dp"
-        android:layout_toEndOf="@+id/InterestedUserListItemUserName"
-        android:layout_alignBottom="@+id/InterestedUserListItemUserName"/>
+        android:layout_alignParentEnd="true"
+        />
 
 </RelativeLayout>

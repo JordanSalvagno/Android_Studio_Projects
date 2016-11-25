@@ -27,6 +27,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -53,7 +54,7 @@ public class LocalActivitiesListFragment extends ListFragment {
     private EditText inputZip;
     String zipCode = "";
     EditText zipInput;
-    String title, message, city, state, URL, curUser;
+    String title, message, city, state, URL, curUser, imageURL;
     int activityId, userId;
     int zip;
 
@@ -63,7 +64,6 @@ public class LocalActivitiesListFragment extends ListFragment {
         Intent intent = getActivity().getIntent();
         KeyValues keyValues = new KeyValues();
         curUser = keyValues.getCurrentUser(LocalActivitiesActivity.mContext);
-        //curUser = intent.getExtras().getString(LoginActivity.CURRENT_USER_ID_EXTRA, "0");
         zipInput = (EditText) getActivity().findViewById(R.id.inputZip);
         Button searchButton = (Button) getActivity().findViewById(R.id.searchZip);
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +103,8 @@ public class LocalActivitiesListFragment extends ListFragment {
                                 city = attributeObject.getString("city");
                                 state = attributeObject.getString("state");
                                 zip = attributeObject.getInt("zip");
-                                activities.add(new Activity(title, message, city, state, zip, userId, activityId));
+                                imageURL = attributeObject.getString("user-image");
+                                activities.add(new Activity(title, message, city, state, zip, userId, activityId, imageURL));
                             }
                             activityAdapter = new ActivityAdapter(getActivity(), activities);
                             setListAdapter(activityAdapter);
@@ -176,6 +177,7 @@ public class LocalActivitiesListFragment extends ListFragment {
         Log.d("activity ID", "" + activity.getActivityId());
         intent.putExtra(LocalActivitiesActivity.ACTIVITY_USER_ID_EXTRA, "" + activity.getUserId());
         intent.putExtra(LocalActivitiesActivity.CURRENT_USER_ID_EXTRA, curUser);
+        intent.putExtra(LocalActivitiesActivity.ACTIVITY_USER_IMAGE_EXTRA, activity.getUserImageURL());
         Log.d("user ID", "" + activity.getUserId());
         Log.d("Current user ID", curUser);
         switch (ftl) {

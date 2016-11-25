@@ -6,11 +6,11 @@ package com.jsalvagno.friend_list;
 
 public class Rating {
 
-    private String comment, commenterUname;
+    private String comment, commenterUname, commenterImage;
     private float rating;
     private int userRated, userCommenter, ratingId;
 
-    public Rating(String commenterUname, String comment, float rating, int ratingId, int userRated, int userCommenter){
+    public Rating(String commenterUname, String comment, float rating, int ratingId, int userRated, int userCommenter, String commenterImage){
 
         this.commenterUname = commenterUname;
         this.comment = comment;
@@ -18,6 +18,7 @@ public class Rating {
         this.rating = rating;
         this.userRated = userRated;
         this.userCommenter = userCommenter;
+        this.commenterImage = commenterImage;
 
     }
 
@@ -43,6 +44,11 @@ public class Rating {
 
         return userCommenter;
     }
+
+    public String getCommentersImage(){
+       return commenterImage;
+    }
+
 
     public String toString(){
         return "";

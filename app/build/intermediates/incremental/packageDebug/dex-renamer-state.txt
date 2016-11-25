@@ -1,4 +1,4 @@
-#Wed Nov 23 20:28:07 PST 2016
+#Thu Nov 24 13:51:15 PST 2016
 base.0=/Users/jordansalvagno/AndroidStudioProjects/Friend_List/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_02bb74f66126adf16d3dfe986d500208463eaee7
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -79,7 +79,7 @@ public class InterestedUsersListFragment extends ListFragment {
                         try {
                             JSONArray activityArray = response.optJSONArray("data");
                             Log.d("response", response.toString());
-                            String name, uname, city, state, zip, bio, email, activitiesURL, ratingsURL;
+                            String name, uname, city, state, zip, bio, email, activitiesURL, ratingsURL, image;
                             for (int i = 0; i < activityArray.length(); i++) {
                                 JSONArray userArray = activityArray.getJSONObject(i).getJSONObject("attributes").getJSONArray("interested-users");
                                 for (int ii = 0; ii < userArray.length(); ii++) {
@@ -91,9 +91,10 @@ public class InterestedUsersListFragment extends ListFragment {
                                         bio = userObject.getString("bio");
                                         email = userObject.getString("email");
                                         zip = userObject.getString("zip");
+                                        image = userObject.getString("image");
                                         activitiesURL = "";
                                         ratingsURL = "";
-                                        users.add(new User(name, uname, email, bio, activitiesURL, ratingsURL, city, zip));
+                                        users.add(new User(name, uname, email, bio, activitiesURL, ratingsURL, city, zip, image));
                                 }
                             }
                         } catch (JSONException e) {

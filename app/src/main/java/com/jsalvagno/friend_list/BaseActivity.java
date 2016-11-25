@@ -19,7 +19,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -31,6 +33,9 @@ public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
+    ImageLoader imageLoader;
+    NetworkImageView networkImageView;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +50,16 @@ public class BaseActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        KeyValues keyValues = new KeyValues();
+        String URL = "";
+        URL = keyValues.getCurrentImage(getApplicationContext());
+        Log.d("Profile Image", URL);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View view = navigationView.getHeaderView(0);
+         networkImageView = (NetworkImageView) view.findViewById(R.id.drawerImageView);
+        imageLoader = MySingleton.getInstance(getApplicationContext()).getImageLoader();
+        networkImageView.setImageUrl(URL, imageLoader);
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 

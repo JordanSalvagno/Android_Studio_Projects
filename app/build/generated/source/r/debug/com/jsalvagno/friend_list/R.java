@@ -2585,23 +2585,24 @@ containing a value of this type.
         public static final int design_ic_visibility=0x7f020054;
         public static final int design_snackbar_background=0x7f020055;
         public static final int elcacto=0x7f020056;
-        public static final int ic_action_add_group=0x7f020057;
-        public static final int ic_action_add_person=0x7f020058;
-        public static final int ic_action_email=0x7f020059;
-        public static final int ic_action_person=0x7f02005a;
-        public static final int ic_menu_camera=0x7f02005b;
-        public static final int ic_menu_gallery=0x7f02005c;
-        public static final int ic_menu_manage=0x7f02005d;
-        public static final int ic_menu_send=0x7f02005e;
-        public static final int ic_menu_share=0x7f02005f;
-        public static final int ic_menu_slideshow=0x7f020060;
-        public static final int navigation_empty_icon=0x7f020061;
-        public static final int notification_template_icon_bg=0x7f020067;
-        public static final int placeholder=0x7f020062;
-        public static final int placeholder2=0x7f020063;
-        public static final int placeholder3=0x7f020064;
-        public static final int placeholder4=0x7f020065;
-        public static final int side_nav_bar=0x7f020066;
+        public static final int header=0x7f020057;
+        public static final int ic_action_add_group=0x7f020058;
+        public static final int ic_action_add_person=0x7f020059;
+        public static final int ic_action_email=0x7f02005a;
+        public static final int ic_action_person=0x7f02005b;
+        public static final int ic_menu_camera=0x7f02005c;
+        public static final int ic_menu_gallery=0x7f02005d;
+        public static final int ic_menu_manage=0x7f02005e;
+        public static final int ic_menu_send=0x7f02005f;
+        public static final int ic_menu_share=0x7f020060;
+        public static final int ic_menu_slideshow=0x7f020061;
+        public static final int navigation_empty_icon=0x7f020062;
+        public static final int notification_template_icon_bg=0x7f020068;
+        public static final int placeholder=0x7f020063;
+        public static final int placeholder2=0x7f020064;
+        public static final int placeholder3=0x7f020065;
+        public static final int placeholder4=0x7f020066;
+        public static final int side_nav_bar=0x7f020067;
     }
     public static final class id {
         public static final int InterestedUserListItemRating=0x7f0c00c9;
@@ -2667,6 +2668,7 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0c008b;
         public static final int design_navigation_view=0x7f0c008a;
         public static final int disableHome=0x7f0c000e;
+        public static final int drawerImageView=0x7f0c00b4;
         public static final int drawer_layout=0x7f0c006e;
         public static final int edit=0x7f0c00d0;
         public static final int editActivityCity=0x7f0c0090;
@@ -2705,7 +2707,6 @@ containing a value of this type.
         public static final int id=0x7f0c00a8;
         public static final int ifRoom=0x7f0c0038;
         public static final int image=0x7f0c0042;
-        public static final int imageView=0x7f0c00b4;
         public static final int info=0x7f0c00c1;
         public static final int inputZip=0x7f0c0082;
         public static final int item_touch_helper_previous_elevation=0x7f0c0005;

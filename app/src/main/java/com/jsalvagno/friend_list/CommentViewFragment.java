@@ -12,12 +12,20 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CommentViewFragment extends Fragment {
 
+    TextView userName;
+    TextView comment;
+    RatingBar rating;
+    NetworkImageView icon;
+    ImageLoader imageLoader;
 
     public CommentViewFragment() {
         // Required empty public constructor
@@ -29,20 +37,19 @@ public class CommentViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View fragmentLayout = inflater.inflate(R.layout.fragment_comment_view, container, false);
 
-        TextView userName = (TextView) fragmentLayout.findViewById(R.id.commentViewUserName);
-        TextView comment = (TextView) fragmentLayout.findViewById(R.id.commentViewComment);
-        RatingBar rating = (RatingBar) fragmentLayout.findViewById(R.id.commentViewRating);
-        ImageView icon = (ImageView) fragmentLayout.findViewById(R.id.commentViewUserIcon);
+        userName = (TextView) fragmentLayout.findViewById(R.id.commentViewUserName);
+        comment = (TextView) fragmentLayout.findViewById(R.id.commentViewComment);
+        rating = (RatingBar) fragmentLayout.findViewById(R.id.commentViewRating);
+        icon = (NetworkImageView) fragmentLayout.findViewById(R.id.commentViewUserIcon);
 
         Intent intent = getActivity().getIntent();
 
         userName.setText(intent.getExtras().getString(UserRatingsActivity.RATING_UNAME_EXTRA));
         comment.setText(intent.getExtras().getString(UserRatingsActivity.RATING_COMMENT_EXTRA));
         rating.setRating(intent.getExtras().getFloat(UserRatingsActivity.RATING_EXTRA));
-
-        long userId = intent.getExtras().getLong(UserRatingsActivity.RATING_USER_ID_EXTRA);
-
-        icon.setImageResource(Activity.userIdToDrawable(userId));
+        imageLoader = MySingleton.getInstance(getActivity().getApplicationContext()).getImageLoader();
+        String imageURL = intent.getExtras().getString(UserRatingsActivity.RATING_USER_IMAGE_EXTRA);
+        icon.setImageUrl(imageURL, imageLoader);
 
         return fragmentLayout;
     }
